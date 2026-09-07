@@ -31,14 +31,16 @@ int main() {
 
         switch (choice) {
             case 1:
-                cout << "Введите сторону a и высоту h: ";
+                cout << "Введите сторону a и высоту h (в сантиметрах): ";
                 cin >> a >> h;
-                cout << "Площадь = " << triangleArea(a, h) << "\n";
+		cout << "=== Площадь треугольника со стороной a и высотой h ===\n";
+                cout << "Площадь = " << triangleArea(a, h) << "См\n";
                 break;
 	    case 2:
-		cout << "Введите стороны a,b,c: ";
+		cout << "Введите стороны a,b,c (в сантиметрах): ";
 		cin >> a >> b >> c;
-		cout << "Периметр = " << trianglePerimeter(a,b,c) << "\n";
+		cout << "=== Периметр треугольника со сторонами a,b,c ===\n";
+		cout << "Периметр = " << trianglePerimeter(a,b,c) << "См\n";
 		break;
             case 0:
                 cout << "Работа завершена.\n";
