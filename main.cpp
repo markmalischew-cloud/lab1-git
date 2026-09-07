@@ -11,6 +11,11 @@ double triangleArea(double a, double h) {
     return a * h / 2;
 }
 
+// Периметр треугольника со сторонами a,b,c
+double trianglePerimeter(double a, double b, double c) {
+    return a+b+c;
+}
+
 // ===== Главная функция: меню =====
 int main() {
     int choice;
@@ -19,6 +24,7 @@ int main() {
     do {
         cout << "\n=== Вариант 4: расчёты для треугольника ===\n";
         cout << "1. Площадь\n";
+	cout << "2. Периметр\n";
 	cout << "0. Выход\n";
         cout << "Выберите пункт: ";
         cin >> choice;
@@ -29,6 +35,11 @@ int main() {
                 cin >> a >> h;
                 cout << "Площадь = " << triangleArea(a, h) << "\n";
                 break;
+	    case 2:
+		cout << "Введите стороны a,b,c: ";
+		cin >> a >> b >> c;
+		cout << "Периметр = " << trianglePerimeter(a,b,c) << "\n";
+		break;
             case 0:
                 cout << "Работа завершена.\n";
                 break;
