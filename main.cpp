@@ -32,15 +32,19 @@ int main() {
 
         switch (choice) {
             case 1:
+                do {
                 cout << "Введите сторону a и высоту h (в сантиметрах): ";
                 cin >> a >> h;
 		cout << "\n=== Площадь треугольника со стороной a и высотой h ===\n";
+                } while(a <= 0 || h <=0);
                 cout << "Площадь = " << triangleArea(a, h) << " См\n";
                 break;
 	    case 2:
+                do{
 		cout << "Введите стороны a,b,c (в сантиметрах): ";
 		cin >> a >> b >> c;
 		cout << "\n=== Периметр треугольника со сторонами a,b,c ===\n";
+                } while(a <= 0 || b <= 0 || c <= 0);
 		cout << "Периметр = " << trianglePerimeter(a,b,c) << " См\n";
 		break;
             case 0:
